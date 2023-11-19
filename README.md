@@ -20,12 +20,13 @@ AbleEd is an innovative platform revolutionizing science education through Augme
 ### AR Visualization
 - Echo3D
 - WebAR
-- 3D Modeling Software
+- 3D Modeling Solaris
 
-### App Development
-- React Native
+### Frontend
+- Next.js
+- React.js
 - JavaScript
-- Expo
+- TailwindCSS
 
 ### Backend
 - Node.js
@@ -34,21 +35,65 @@ AbleEd is an innovative platform revolutionizing science education through Augme
 
 ### Version Control & Deployment
 - Git/GitHub
-- Vercel (Frontend)
-- Heroku (Backend)
+- Replit (Frontend)
+- Cyclic (Backend)
 
 ## Setup AbleEd Locally
 
-If you're interested in contributing to AbleEd, follow these steps to set up the project locally on your machine:
+### **Prerequisites**
 
-1. Clone the AbleEd repository:
-   git clone https://github.com/AbleEd/AbleEd.git
+This repo requires the use of [`pnpm`](https://pnpm.io/). To install, run the command:
 
-2. Navigate to the project directory:
-	cd AbleEd
-	npm install
-	cd backend
-	npm install
+```bash
+npm -g install pnpm
+```
+
+or follow the instructions on [pnpm's installation page](https://pnpm.io/installation).
+
+
+
+<br/>
+
+### **Installation**
+
+To install the required packages & dependencies:
+
+```bash
+pnpm install
+```
+
+<br/>
+
+### **Environment Variables**
+
+- This will require that you setup a MongoDB database. We recommend using MongoDB Atlas because there's a free option.
+- You will also need access to our Discord Developer Portal. For this, you can reach out @GarlandKey or @JoeKarow.
+- Do not try to run the server locally until you have completed the MongoDB and Discord setup.
+
+Copy `.env.example` in the root directory and name it `.env`
+
+```bash
+cp .env.example .env
+```
+
+Follow the instructions listed in the newly created `.env`.
+
+Once complete, you'll need to seed the database with test data. Do this as follows:
+
+```bash
+pnpm db:seed
+pnpm db:devseed
+```
+
+<br/>
+
+## Usage
+
+To start the development live server:
+
+```bash
+pnpm dev
+```
 
 ## Team
 
